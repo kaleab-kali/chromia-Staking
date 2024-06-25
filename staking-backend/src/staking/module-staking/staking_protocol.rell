@@ -18,14 +18,14 @@ function stake_token(account, amount: integer, stake_duration: duration ) {
 
 
 function unstake_token(stake_id: byte_array) {
-    val stake = get stake(stake_id);
+    // val stake = get stake(stake_id);
     stake.unstake_requested = true;
     stake.unstake_request_timestamp = op_context.last_block_time;
 }
 
 // Calculate the remaining staking duration
 function remaining_stake_duration(stake_id: byte_array): duration {
-    val stake = get stake(stake_id);
+    // val stake = get stake(stake_id);
     val current_time = op_context.last_block_time;
     val elapsed_time = current_time - stake.stake_timestamp;
     return stake.stake_duration - elapsed_time;
