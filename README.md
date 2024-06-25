@@ -85,5 +85,3 @@ Follow these steps to set up and run the project locally.
 7. **Check Unstake Status:**
    - The interface will display the status of your unstake request.
 ```
-
-Feel free to replace the placeholders with actual content specific to your project. If you have any other requests or need further assistance, feel free to ask! 😊
