@@ -1,0 +1,13 @@
+blockchains:
+  staking-backend:
+    module: main
+    test:
+      modules:
+        - staking_backend_test
+compile:
+  rellVersion: 0.13.5
+database:
+  schema: schema_staking_backend
+test:
+  modules:
+    - staking_backend.test

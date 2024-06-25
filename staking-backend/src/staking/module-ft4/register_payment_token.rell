@@ -1,0 +1,7 @@
+module;
+
+import lib.ft4.assets.{ asset, Unsafe };
+
+object dapp_meta {
+    asset = Unsafe.register_asset("Staking Token", "STK", 18);
+} 
