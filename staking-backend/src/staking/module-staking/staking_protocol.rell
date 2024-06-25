@@ -23,7 +23,7 @@ function unstake_token(stake_id: byte_array) {
     stake.unstake_request_timestamp = op_context.last_block_time;
 }
 
-// Calculate the remaining staking duration
+
 function remaining_stake_duration(stake_id: byte_array): duration {
     // val stake = get stake(stake_id);
     val current_time = op_context.last_block_time;
