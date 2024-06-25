@@ -22,7 +22,68 @@ The frontend is built using React and provides an interface for users to interac
 Follow these steps to set up and run the project locally.
 
 ### Backend
-1. **Clone the repository:**
-   ```bash
-   git clone [repository-url]
-   cd chromia-staking-protocol/backend
+
+# StakingProject
+
+## Setup Instructions
+
+1. **Clone the Repository:**
+   ```
+   git clone https://github.com/kaleab-kali/chromia-Staking.git
+   
+   ```
+
+2. **Install Dependencies:**
+   - Ensure you have necessary tools installed (e.g., VS Code, Node.js, etc.).
+   - Install Postgres.
+   - Install the Rell extension for VS Code.
+
+3. **Install Frontend Dependencies:**
+   ```
+   cd frontend
+   npm install
+   ```
+
+4. **Install Backend Dependencies:**
+   ```
+   cd staking-backend
+   chr install
+   ```
+
+5. **Run the Frontend:**
+   - Start the frontend server:
+     ```
+     npm run dev
+     ```
+
+6. **Run the Chromia Node:**
+   - Start the Node server:
+     ```
+     chr node start
+     ```
+
+## Usage Instructions
+
+1. **Access the Interface:**
+   - Open your web browser and navigate to [http://localhost:3000](http://localhost:3000).
+
+2. **Stake Tokens:**
+   - Enter the amount of FT4 tokens you want to stake and submit the form.
+
+3. **View Staked Amount and Yield:**
+   - The interface will display the amount of tokens staked and the yield earned so far.
+
+4. **Claim Yield:**
+   - Click the "Claim Yield" button to withdraw your accumulated yield.
+
+5. **Initiate Unstake Request:**
+   - Click the "Unstake" button to initiate an unstake request.
+
+6. **Complete Unstake Request:**
+   - After two weeks, return to the interface and complete the unstake process to withdraw your tokens.
+
+7. **Check Unstake Status:**
+   - The interface will display the status of your unstake request.
+```
+
+Feel free to replace the placeholders with actual content specific to your project. If you have any other requests or need further assistance, feel free to ask! 😊
