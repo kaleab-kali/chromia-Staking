@@ -1,0 +1,41 @@
+import user_management;
+import task_management;
+import auth;
+
+
+operation register_user(pubkey: byte_array, name: text) {
+    user_management.create_user(pubkey, name);
+}
+
+operation verify_signature(pubkey: byte_array, message: text, signature: byte_array): boolean {
+    return auth.verify_signature(pubkey, message, signature);
+}
+
+
+operation add_task(pubkey: byte_array, title: text, description: text, due_date: timestamp) {
+    task_management.add_task(pubkey, title, description, due_date);
+}
+
+
+operation update_task(pubkey: byte_array, task_id: integer, title: text, description: text, due_date: timestamp) {
+    task_management.update_task(pubkey, task_id, title, description, due_date);
+}
+
+
+operation complete_task(pubkey: byte_array, task_id: integer) {
+    task_management.complete_task(pubkey, task_id);
+}
+
+
+operation delete_task(pubkey: byte_array, task_id: integer) {
+    task_management.delete_task(pubkey, task_id);
+}
+
+query get_tasks(pubkey: byte_array, completed: boolean?): list<task> {
+    return task_management.get_tasks(pubkey, completed);
+}
+
+
+query user_exists(pubkey: byte_array): boolean {
+    return user_management.user_exists(pubkey);
+}

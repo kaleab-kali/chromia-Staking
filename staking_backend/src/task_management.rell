@@ -1,0 +1,30 @@
+
+import user, task;
+
+
+operation add_task(user_address: text, title: text, description: text, due_date: timestamp) {
+    val user = user @ { .address == user_address };
+    val task_id = (task @* { .user == user }.size() + 1); // Generate a unique task ID
+    create task(user, task_id, title, description, due_date);
+}
+
+operation update_task(user_address: text, task_id: integer, title: text, description: text, due_date: timestamp) {
+    val task = task @ { .user.address == user_address, .id == task_id };
+    task.(title, description, due_date) = (title, description, due_date);
+}
+
+
+operation complete_task(user_address: text, task_id: integer) {
+    val task = task @ { .user.address == user_address, .id == task_id };
+    task.completed = true;
+}
+
+
+operation delete_task(user_address: text, task_id: integer) {
+    delete task @ { .user.address == user_address, .id == task_id };
+}
+
+// Retrieve tasks for a user, with optional filtering by completion status
+query get_tasks(user_address: text, completed: boolean?): list<task> {
+    return task @* { .user.address == user_address, .completed == completed };
+}

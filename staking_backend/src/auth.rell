@@ -1,0 +1,7 @@
+
+import ft4.{ ft4_auth, ft4_user };
+
+
+operation verify_signature(address: text, message: text, signature: text): boolean {
+    return ft4_auth.verify_evm_signature(address, message, signature);
+}

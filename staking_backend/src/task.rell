@@ -1,0 +1,10 @@
+import user;
+
+entity task {
+    key user: user;             // User who owns the task
+    key id: integer;            // Unique task ID for the user
+    mutable title: text;        // Task title
+    mutable description: text;  // Task description
+    mutable due_date: timestamp; // Task due date
+    mutable completed: boolean = false; // Task completion status
+}

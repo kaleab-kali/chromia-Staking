@@ -1,0 +1,14 @@
+
+import user;
+
+// Create a new user
+operation create_user(address: text, name: text) {
+    require(!user @? { .address == address }, "User already exists");
+    create user(address, name);
+}
+
+
+query get_user(address: text): user {
+    return user @ { .address == address };
+}
+

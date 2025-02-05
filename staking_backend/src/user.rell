@@ -1,0 +1,6 @@
+module;
+
+entity user {
+    key address: text; // Ethereum address for authentication
+    mutable name: text; 
+}
