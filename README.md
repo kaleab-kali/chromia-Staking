@@ -1,87 +1,44 @@
-# Chromia Staking Protocol
+# Chromia Todo-list Application
 
 ## Author Information
-**Name:** Kaleab Girma  
-**Email:** kaleab.girma.official@gmail.com
+- **Name:** Kaleab Girma  
+- **Email:** kaleab.girma.official@gmail.com
+
+---
 
 ## Project Description
-This project implements a staking protocol using Chromia's Rell language and the FT4 library. The protocol allows users to stake FT4 tokens and earn a 10% annual yield, which can be claimed at any time. Additionally, users can initiate an unstake request that requires a two-week notice period before the staked tokens can be withdrawn.
+This project is a **multi-user todo-list application** built using Chromia's Rell language and the FT4 library. The application allows users to:
+- Create an account using an **EVM wallet** (e.g., MetaMask).
+- Add, update, complete, and delete tasks.
+- View tasks filtered by status (completed or pending) and sorted by due date.
+
+---
 
 ## How It Works
-The staking protocol consists of two main smart contracts: the FT4 token contract and the staking protocol contract.
+The application consists of two main components:
+1. **Backend**: Built using Chromia Rell and FT4 for user authentication and task management.
+2. **Frontend**: Built using React and TypeScript, providing a user-friendly interface for managing tasks.
 
-### Staking Process
-- Users stake their FT4 tokens by interacting with the staking protocol contract.
-- The staked tokens generate a 10% annual yield, which can be queried and claimed at any time.
-- Users can initiate an unstake request, which locks the staked tokens for two weeks before they can be withdrawn.
+### Backend
+- **User Management**: Users can register and log in using their Ethereum wallet.
+- **Task Management**: Users can add, update, complete, and delete tasks. Tasks are stored on the blockchain and are only accessible to the user who created them.
 
 ### Frontend
-The frontend is built using React and provides an interface for users to interact with the staking protocol. It allows users to stake tokens, claim yield, initiate unstake requests, and check the status of their unstake requests.
+- **User Authentication**: Users connect their Ethereum wallet to log in.
+- **Task Management Interface**: Users can view, add, update, complete, and delete tasks.
+- **Filters and Sorting**: Tasks can be filtered by status (completed or pending) and sorted by due date.
+
+---
 
 ## Setup Instructions
 Follow these steps to set up and run the project locally.
 
-### Backend
+### Prerequisites
+- **Node.js**: Install from [nodejs.org](https://nodejs.org/).
+- **MetaMask**: Install the browser extension from [metamask.io](https://metamask.io/).
+- **Rell Extension for VS Code**: Install from the VS Code marketplace.
 
-# StakingProject
-
-## Setup Instructions
-
-1. **Clone the Repository:**
-   ```
-   git clone https://github.com/kaleab-kali/chromia-Staking.git
-   
-   ```
-
-2. **Install Dependencies:**
-   - Ensure you have necessary tools installed (e.g., VS Code, Node.js, etc.).
-   - Install Postgres.
-   - Install the Rell extension for VS Code.
-
-3. **Install Frontend Dependencies:**
-   ```
-   cd frontend
-   npm install
-   ```
-
-4. **Install Backend Dependencies:**
-   ```
-   cd staking-backend
-   chr install
-   ```
-
-5. **Run the Frontend:**
-   - Start the frontend server:
-     ```
-     npm run dev
-     ```
-
-6. **Run the Chromia Node:**
-   - Start the Node server:
-     ```
-     chr node start
-     ```
-
-## Usage Instructions
-
-1. **Access the Interface:**
-   - Open your web browser and navigate to [http://localhost:3000](http://localhost:3000).
-
-2. **Stake Tokens:**
-   - Enter the amount of FT4 tokens you want to stake and submit the form.
-
-3. **View Staked Amount and Yield:**
-   - The interface will display the amount of tokens staked and the yield earned so far.
-
-4. **Claim Yield:**
-   - Click the "Claim Yield" button to withdraw your accumulated yield.
-
-5. **Initiate Unstake Request:**
-   - Click the "Unstake" button to initiate an unstake request.
-
-6. **Complete Unstake Request:**
-   - After two weeks, return to the interface and complete the unstake process to withdraw your tokens.
-
-7. **Check Unstake Status:**
-   - The interface will display the status of your unstake request.
-```
+### Step 1: Clone the Repository
+```bash
+git clone https://github.com/kaleab-kali/chromia-todo-list.git
+cd chromia-todo-list

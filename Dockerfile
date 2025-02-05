@@ -1,7 +1,7 @@
 # Use an official Ubuntu as a parent image
 FROM ubuntu:20.04
 
-# Set environment variables to avoid prompts during installation
+# Set environment variables to avoid prompts 
 ENV DEBIAN_FRONTEND=noninteractive
 
 # Update and install dependencies
