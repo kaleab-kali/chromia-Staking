@@ -40,5 +40,5 @@ Follow these steps to set up and run the project locally.
 
 ### Step 1: Clone the Repository
 ```bash
-git clone https://github.com/kaleab-kali/chromia-todo-list.git
-cd chromia-todo-list
+git clone https://github.com/kaleab-kali/chromia-Staking.git
+cd chromia-Staking
